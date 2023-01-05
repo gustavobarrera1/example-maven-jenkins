@@ -15,14 +15,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "cd sample-maven-app"
-                sh 'mvn -B -DskipTests clean package'
+                sh "cd sample-maven-app &&mvn -B -DskipTests clean package"
             }
         }
         stage('Test') {
             steps {
-                sh "cd sample-maven-app"
-                sh 'mvn test'
+                sh "cd sample-maven-app && mvn test"
             }
             post {
                 always {
