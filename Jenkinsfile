@@ -10,6 +10,7 @@ pipeline {
           steps {
             script {
               checkout scm
+              sh 'docker-compose down && docker-compose up -d'
             }
           }  
         }
