@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "cd sample-maven-app &&mvn -B -DskipTests clean package"
+                sh "cd sample-maven-app && mvn -B -DskipTests clean package"
             }
         }
         stage('Test') {
