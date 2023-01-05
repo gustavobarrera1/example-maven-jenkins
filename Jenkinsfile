@@ -22,11 +22,6 @@ pipeline {
             steps {
                 sh "cd sample-maven-app && mvn test"
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
         }
     }
 }
